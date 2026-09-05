@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ceylon Harvest | True Ceylon Cinnamon from Sri Lanka</title>
+    <meta name="description" content="Discover authentic true Ceylon cinnamon from Sri Lanka, including Alba, C4 and C5 cinnamon quills, alongside premium Sri Lankan black pepper. Available across the UK.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cinnamon: {
+                            light: '#E8D2B2',
+                            sand: '#F4E8D6',
+                            cream: '#FBF7F0',
+                            burgundy: '#5A0F20',
+                            wine: '#3D0B18',
+                            gold: '#C69A3A',
+                            espresso: '#2B211B',
+                            charcoal: '#292522'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FBF7F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #E8D2B2;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #C69A3A;
+        }
+
+        /* Subtle floating animation */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Scroll reveal transition classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            border-radius: 50px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            background-color: #20ba5a;
+            transform: scale(1.05);
+        }
+        .whatsapp-float svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .site-logo {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+		
+		.map-container {
+            margin-top: 20px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .map-container iframe {
+            display: block;
+            width: 100%;
+            border: none;
+        }
+        .trust-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #4A0E17;
+            padding: 35px 20px;
+            width: 100%;
+        }
+
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+            position: relative;
+            padding: 0 15px;
+            border-right: 1px solid rgba(212, 175, 55, 0.5); 
+        }
+
+        .trust-item:last-child {
+            border-right: none;
+        }
+
+        .trust-icon {
+            width: 32px;
+            height: 32px;
+            stroke: #D4AF37;
+            margin-bottom: 14px;
+        }
+
+        .trust-item span {
+            color: #FFFFFF;
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.8px;
+            line-height: 1.4;
+            text-transform: uppercase;
+            max-width: 150px;
+        }
+    </style>
+</head>
+
+<body class="bg-cinnamon-cream text-cinnamon-espresso font-sans antialiased selection:bg-cinnamon-gold selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-cinnamon-burgundy text-cinnamon-cream text-xs sm:text-sm py-2 px-4 text-center font-medium tracking-wide">
+        <span>Authentic Cinnamomum verum directly from Sri Lanka to the United Kingdom</span>
+        <span class="mx-2 text-cinnamon-gold">|</span>
+        <a href="#shop" class="underline hover:text-cinnamon-gold transition-colors">Explore Specialist Collection</a>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header id="site-header" class="sticky top-0 z-50 transition-all duration-300 bg-cinnamon-light/90 backdrop-blur-md border-b border-cinnamon-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group focus:outline-none focus:ring-2 focus:ring-cinnamon-gold rounded-lg p-1">
+                <img src="ceylon_harvest_dark.png" alt="Ceylon Harvest Logo" class="site-logo h-12 w-auto object-contain group-hover:scale-105 transition-transform">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+                <a href="#" class="text-cinnamon-burgundy font-semibold hover:text-cinnamon-gold transition-colors">Home</a>
+                <a href="#true-cinnamon" class="hover:text-cinnamon-burgundy transition-colors">True Ceylon Cinnamon</a>
+                <a href="#our-story" class="hover:text-cinnamon-burgundy transition-colors">Our Story</a>
+                <a href="#shop" class="hover:text-cinnamon-burgundy transition-colors">Shop</a>
+                <a href="#trade" class="hover:text-cinnamon-burgundy transition-colors">Trade & Wholesale</a>
+                <a href="#reviews" class="hover:text-cinnamon-burgundy transition-colors">Customer Reviews</a>
+                <a href="#contact" class="hover:text-cinnamon-burgundy transition-colors">Contact</a>
+            </nav>
+
+            <!-- Action Buttons -->
+            <div class="hidden sm:flex items-center gap-4">
+                <button onclick="toggleCartDrawer()" aria-label="Open Enquiry Cart" class="relative p-2.5 rounded-full bg-cinnamon-sand hover:bg-cinnamon-gold/20 text-cinnamon-espresso transition-colors focus:outline-none focus:ring-2 focus:ring-cinnamon-gold">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    <span id="cart-badge" class="absolute -top-1 -right-1 bg-cinnamon-burgundy text-cinnamon-cream text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold shadow">0</span>
+                </button>
+                <a href="https://wa.me/447852432693" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white px-4 py-2.5 rounded-full text-sm font-semibold shadow-sm transition-all hover:scale-[1.02]">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i>
+                    <span>Order Now</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="flex items-center gap-3 lg:hidden">
+                <button onclick="toggleCartDrawer()" aria-label="Open Enquiry Cart" class="relative p-2 rounded-full bg-cinnamon-sand text-cinnamon-espresso">
+                    <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+                    <span id="mobile-cart-badge" class="absolute -top-1 -right-1 bg-cinnamon-burgundy text-cinnamon-cream text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold">0</span>
+                </button>
+                <button onclick="toggleMobileMenu()" aria-label="Toggle Menu" class="p-2 rounded-lg text-cinnamon-espresso hover:bg-cinnamon-sand">
+                    <i id="menu-icon" data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-cinnamon-cream border-b border-cinnamon-gold/20 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#" onclick="toggleMobileMenu()" class="block py-2 text-base font-semibold text-cinnamon-burgundy border-b border-cinnamon-sand">Home</a>
+            <a href="#true-cinnamon" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium border-b border-cinnamon-sand">True Ceylon Cinnamon</a>
+            <a href="#our-story" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium border-b border-cinnamon-sand">Our Story</a>
+            <a href="#shop" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium border-b border-cinnamon-sand">Shop</a>
+            <a href="#trade" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium border-b border-cinnamon-sand">Trade & Wholesale</a>
+            <a href="#reviews" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium border-b border-cinnamon-sand">Customer Reviews</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-base font-medium border-b border-cinnamon-sand">Contact</a>
+            <div class="pt-2">
+                <a href="https://wa.me/447852432693" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full bg-emerald-700 text-white py-3 rounded-xl font-semibold shadow">
+                    <i data-lucide="message-circle" class="w-5 h-5"></i>
+                    <span>Order on WhatsApp (+44 7852 432693)</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider Section -->
+    <section class="relative bg-cinnamon-sand overflow-hidden min-h-[600px] lg:min-h-[700px] flex items-center">
+        <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(#5A0F20_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 w-full relative z-10">
+            <div id="hero-slider" class="relative">
+                
+                <!-- Slide 1: Alba -->
+                <div class="hero-slide grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-opacity duration-700 ease-in-out">
+                    <div class="space-y-6 text-center lg:text-left">
+                        <span class="inline-block bg-cinnamon-burgundy/10 text-cinnamon-burgundy text-xs uppercase tracking-widest px-3 py-1.5 rounded-full font-semibold">Finest Grade</span>
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cinnamon-espresso leading-tight">Alba True Ceylon Cinnamon</h1>
+                        <p class="text-lg text-cinnamon-espresso/80 max-w-xl mx-auto lg:mx-0 font-light">Fine, delicate and beautifully layered cinnamon quills from Sri Lanka, selected for uncompromising quality and aroma.</p>
+                        <p class="text-sm font-semibold text-cinnamon-burgundy tracking-wide">Cinnamomum verum <span class="mx-2">•</span> Sri Lankan Origin</p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#shop" class="bg-cinnamon-burgundy hover:bg-cinnamon-wine text-cinnamon-cream px-8 py-3.5 rounded-full font-semibold shadow-md transition-all hover:scale-105">Discover Alba</a>
+                            <a href="https://wa.me/447852432693" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-3.5 rounded-full font-semibold shadow-md transition-all hover:scale-105">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Order on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <!-- Updated Container for Large Images -->
+                        <div class="w-full max-w-lg bg-white p-4 sm:p-6 rounded-3xl shadow-xl border border-cinnamon-gold/20">
+                            <div class="w-full h-72 sm:h-80 lg:h-96 bg-cinnamon-cream rounded-2xl overflow-hidden relative shadow-inner">
+                                <img src="True_cinnamon_1.png" alt="Alba True Ceylon Cinnamon" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-center text-xs font-semibold uppercase tracking-wider text-cinnamon-burgundy mt-4">Fine, delicate & beautifully layered</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: C4 -->
+                <div class="hero-slide hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-opacity duration-700 ease-in-out">
+                    <div class="space-y-6 text-center lg:text-left">
+                        <span class="inline-block bg-cinnamon-burgundy/10 text-cinnamon-burgundy text-xs uppercase tracking-widest px-3 py-1.5 rounded-full font-semibold">Signature Collection</span>
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cinnamon-espresso leading-tight">C4 True Ceylon Cinnamon</h1>
+                        <p class="text-lg text-cinnamon-espresso/80 max-w-xl mx-auto lg:mx-0 font-light">Carefully selected Sri Lankan quills for flavourful everyday cooking, baking, brewing and thoughtful gifting.</p>
+                        <p class="text-sm font-semibold text-cinnamon-burgundy tracking-wide">Authentic Layered Quills <span class="mx-2">•</span> Cinnamomum verum</p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#shop" class="bg-cinnamon-burgundy hover:bg-cinnamon-wine text-cinnamon-cream px-8 py-3.5 rounded-full font-semibold shadow-md transition-all hover:scale-105">Discover C4</a>
+                            <a href="#shop" class="bg-cinnamon-cream hover:bg-cinnamon-cream/80 text-cinnamon-espresso border border-cinnamon-gold/40 px-8 py-3.5 rounded-full font-semibold transition-all">Shop Cinnamon</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <!-- Updated Container for Large Images -->
+                        <div class="w-full max-w-lg bg-white p-4 sm:p-6 rounded-3xl shadow-xl border border-cinnamon-gold/20">
+                            <div class="w-full h-72 sm:h-80 lg:h-96 bg-cinnamon-cream rounded-2xl overflow-hidden relative shadow-inner">
+                                <img src="Cinnamon-3.png" alt="C4 True Ceylon Cinnamon" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-center text-xs font-semibold uppercase tracking-wider text-cinnamon-burgundy mt-4">Versatile & aromatic everyday quills</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: C5 -->
+                <div class="hero-slide hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-opacity duration-700 ease-in-out">
+                    <div class="space-y-6 text-center lg:text-left">
+                        <span class="inline-block bg-cinnamon-burgundy/10 text-cinnamon-burgundy text-xs uppercase tracking-widest px-3 py-1.5 rounded-full font-semibold">Everyday Authenticity</span>
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cinnamon-espresso leading-tight">C5 True Ceylon Cinnamon</h1>
+                        <p class="text-lg text-cinnamon-espresso/80 max-w-xl mx-auto lg:mx-0 font-light">Genuine Sri Lankan cinnamon quills with the delicate aroma and distinctive layered character of true cinnamon.</p>
+                        <p class="text-sm font-semibold text-cinnamon-burgundy tracking-wide">From Sri Lanka to the United Kingdom</p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#shop" class="bg-cinnamon-burgundy hover:bg-cinnamon-wine text-cinnamon-cream px-8 py-3.5 rounded-full font-semibold shadow-md transition-all hover:scale-105">Discover C5</a>
+                            <a href="https://wa.me/447852432693" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-3.5 rounded-full font-semibold shadow-md transition-all hover:scale-105">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Order on WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <!-- Updated Container for Large Images -->
+                        <div class="w-full max-w-lg bg-white p-4 sm:p-6 rounded-3xl shadow-xl border border-cinnamon-gold/20">
+                            <div class="w-full h-72 sm:h-80 lg:h-96 bg-cinnamon-cream rounded-2xl overflow-hidden relative shadow-inner">
+                                <img src="True_cinnamon_2.png" alt="C5 True Ceylon Cinnamon" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-center text-xs font-semibold uppercase tracking-wider text-cinnamon-burgundy mt-4">Delicate aroma & refined character</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Black Pepper -->
+                <div class="hero-slide hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center transition-opacity duration-700 ease-in-out">
+                    <div class="space-y-6 text-center lg:text-left">
+                        <span class="inline-block bg-cinnamon-burgundy/10 text-cinnamon-burgundy text-xs uppercase tracking-widest px-3 py-1.5 rounded-full font-semibold">From Sri Lanka</span>
+                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-cinnamon-espresso leading-tight">Premium Sri Lankan Black Pepper</h1>
+                        <p class="text-lg text-cinnamon-espresso/80 max-w-xl mx-auto lg:mx-0 font-light">Whole black peppercorns selected for rich aroma, depth and everyday culinary versatility.</p>
+                        <p class="text-sm font-semibold text-cinnamon-burgundy tracking-wide">Piper nigrum <span class="mx-2">•</span> Sri Lankan Origin</p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="#shop" class="bg-cinnamon-burgundy hover:bg-cinnamon-wine text-cinnamon-cream px-8 py-3.5 rounded-full font-semibold shadow-md transition-all hover:scale-105">Discover Black Pepper</a>
+                            <a href="#trade" class="bg-cinnamon-cream hover:bg-cinnamon-cream/80 text-cinnamon-espresso border border-cinnamon-gold/40 px-8 py-3.5 rounded-full font-semibold transition-all">Trade Enquiry</a>
+                        </div>
+                    </div>
+                    <div class="flex justify-center">
+                        <!-- Updated Container for Large Images -->
+                        <div class="w-full max-w-lg bg-white p-4 sm:p-6 rounded-3xl shadow-xl border border-cinnamon-gold/20">
+                            <div class="w-full h-72 sm:h-80 lg:h-96 bg-cinnamon-cream rounded-2xl overflow-hidden relative shadow-inner">
+                                <img src="slide-black-pepper-1.jpg" alt="Premium Sri Lankan Black Pepper" class="w-full h-full object-cover">
+                            </div>
+                            <p class="text-center text-xs font-semibold uppercase tracking-wider text-cinnamon-burgundy mt-4">Rich aroma & bold depth</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Slider Controls & Indicators -->
+            <div class="flex items-center justify-between mt-12 pt-6 border-t border-cinnamon-gold/30">
+                <div class="flex items-center gap-3" id="slider-dots">
+                    <button onclick="currentSlide(0)" aria-label="Slide 1" class="w-8 h-2 rounded-full bg-cinnamon-burgundy transition-all"></button>
+                    <button onclick="currentSlide(1)" aria-label="Slide 2" class="w-3 h-2 rounded-full bg-cinnamon-burgundy/40 transition-all"></button>
+                    <button onclick="currentSlide(2)" aria-label="Slide 3" class="w-3 h-2 rounded-full bg-cinnamon-burgundy/40 transition-all"></button>
+                    <button onclick="currentSlide(3)" aria-label="Slide 4" class="w-3 h-2 rounded-full bg-cinnamon-burgundy/40 transition-all"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Points Bar -->
+    <div class="trust-bar">
+        <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25s-7.5-4.108-7.5-11.25a7.5 7.5 0 1115 0z" />
+            </svg>
+            <span>Sourced From Sri Lanka</span>
+        </div>
+        <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+            </svg>
+            <span>Premium Quality</span>
+        </div>
+        <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>Natural & Pure</span>
+        </div>
+        <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+            </svg>
+            <span>Traceable Batches</span>
+        </div>
+        <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+            </svg>
+            <span>Delicate Aroma Natural Sweetness</span>
+        </div>
+    </div>
+
+    <!-- Section 1: Botanical Heritage -->
+    <section id="true-cinnamon" class="py-20 bg-cinnamon-cream text-cinnamon-espresso reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-cinnamon-burgundy font-semibold">Botanical Heritage</span>
+                    <h2 class="font-serif font-bold text-3xl sm:text-4xl text-cinnamon-espresso leading-tight">The True Cinnamon of Sri Lanka</h2>
+                    <p class="text-base text-cinnamon-espresso/80 leading-relaxed font-light">Ceylon cinnamon, botanically known as <em class="italic">Cinnamomum verum</em>, is native to Sri Lanka and is valued for its delicate aroma, refined flavour and distinctive quills made from many thin layers of inner bark.</p>
+                    <p class="text-base text-cinnamon-espresso/80 leading-relaxed font-light">Ceylon Harvest specialises in authentic true Ceylon cinnamon — Alba, C4 and C5 grades — selected from Sri Lanka and brought to customers across the United Kingdom.</p>
+                    <div>
+                        <a href="#shop" class="inline-flex items-center gap-2 text-cinnamon-burgundy hover:text-cinnamon-gold font-semibold transition-colors">
+                            Discover True Cinnamon &rarr;
+                        </a>
+                    </div>
+                </div>
+                <div class="relative rounded-3xl overflow-hidden shadow-xl min-h-[450px] bg-cinnamon-light border border-cinnamon-gold/30 flex items-center justify-center p-6 transition-transform duration-500 hover:scale-[1.02]">
+                    <img src="True_cinnamon_3.png" alt="Layered Ceylon Cinnamon Quills" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: True Cinnamon, Not Cassia -->
+    <section class="py-20 bg-cinnamon-sand border-y border-cinnamon-gold/20 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest text-cinnamon-burgundy font-bold">Quality Distinction</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cinnamon-espresso">True Cinnamon, Not Cassia</h2>
+                <p class="text-cinnamon-espresso/80 font-light">Understanding the fundamental differences ensures you experience the genuine aroma and delicate profile of authentic Sri Lankan cinnamon.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-cinnamon-cream p-8 sm:p-10 rounded-3xl shadow-md border-2 border-cinnamon-gold/40 space-y-6 relative overflow-hidden transition-all hover:shadow-xl">
+                    <div class="absolute top-0 right-0 bg-cinnamon-burgundy text-cinnamon-cream text-xs uppercase px-4 py-1.5 rounded-bl-2xl font-semibold">Exclusive Offering</div>
+                    <h3 class="font-serif text-2xl font-bold text-cinnamon-burgundy">True Ceylon Cinnamon</h3>
+                    <ul class="space-y-4 text-cinnamon-espresso/90 text-sm sm:text-base">
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-emerald-700 shrink-0 mt-0.5"></i><span>Botanically known as <span class="font-medium italic">Cinnamomum verum</span>.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-emerald-700 shrink-0 mt-0.5"></i><span>Origin: Sri Lanka (the true home of cinnamon).</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-emerald-700 shrink-0 mt-0.5"></i><span>Fine, light, multi-layered quills resembling delicate parchment.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-emerald-700 shrink-0 mt-0.5"></i><span>Delicate aroma and refined, warm flavour.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="check" class="w-5 h-5 text-emerald-700 shrink-0 mt-0.5"></i><span>The only cinnamon sold by Ceylon Harvest.</span></li>
+                    </ul>
+                </div>
+
+                <div class="bg-cinnamon-light/60 p-8 sm:p-10 rounded-3xl shadow-sm border border-cinnamon-gold/20 space-y-6 opacity-90 transition-all hover:opacity-100">
+                    <h3 class="font-serif text-2xl font-bold text-cinnamon-espresso/70">Cassia Cinnamon</h3>
+                    <ul class="space-y-4 text-cinnamon-espresso/70 text-sm sm:text-base">
+                        <li class="flex items-start gap-3"><i data-lucide="x" class="w-5 h-5 text-rose-700 shrink-0 mt-0.5"></i><span>Not sold by Ceylon Harvest.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="x" class="w-5 h-5 text-rose-700 shrink-0 mt-0.5"></i><span>Commonly darker, thicker, harder and coarser.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="x" class="w-5 h-5 text-rose-700 shrink-0 mt-0.5"></i><span>Often formed from a single thick, heavy bark curl.</span></li>
+                        <li class="flex items-start gap-3"><i data-lucide="x" class="w-5 h-5 text-rose-700 shrink-0 mt-0.5"></i><span>Visually and aromatically distinct from true Ceylon cinnamon.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Our Specialist Collection (Shop Preview) -->
+    <section id="shop" class="py-20 bg-cinnamon-cream reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest text-cinnamon-burgundy font-bold">Specialist Catalogue</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cinnamon-espresso">Our Specialist Collection</h2>
+                <p class="text-cinnamon-espresso/80 font-light">Hand-selected Alba, C4, and C5 true Ceylon cinnamon quills alongside premium whole black peppercorns from Sri Lanka.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1: Alba -->
+                <div class="bg-cinnamon-sand/60 rounded-3xl p-6 shadow-md border border-cinnamon-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-cinnamon-burgundy/10 text-cinnamon-burgundy text-[11px] uppercase tracking-wider px-3 py-1 rounded-full font-bold">Alba Grade</span>
+                            <span class="text-xs text-cinnamon-espresso/60 font-medium">Sri Lankan Origin</span>
+                        </div>
+                        <div class="w-full h-48 bg-cinnamon-cream rounded-2xl flex items-center justify-center mb-6 border border-cinnamon-gold/20 overflow-hidden">
+                            <img src="alba.jpg" alt="Alba Quills" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-cinnamon-espresso mb-1">Finest Ceylon Cinnamon — Alba</h3>
+                        <p class="text-xs text-cinnamon-espresso/60 italic mb-4">Cinnamomum verum</p>
+                        <p class="text-xs text-cinnamon-espresso/80 font-light mb-4">Available in Resealable Pouches & Tins (30g, 50g, 100g)</p>
+                    </div>
+                    <div class="space-y-3 pt-4 border-t border-cinnamon-gold/20">
+                        <div class="text-xs font-semibold text-cinnamon-burgundy">Price confirmed on enquiry</div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="openProductModal('Finest Ceylon Cinnamon — Alba', 'Alba', 'Cinnamomum verum', 'Sri Lanka')" class="bg-cinnamon-cream hover:bg-cinnamon-gold/30 text-cinnamon-espresso text-xs font-semibold py-2.5 px-3 rounded-xl transition-colors text-center">View Product</button>
+                            <button onclick="addToEnquiry('Finest Ceylon Cinnamon — Alba', 'Alba', 'Cinnamomum verum', '50g', 'Resealable Pouch')" class="bg-cinnamon-burgundy hover:bg-cinnamon-wine text-cinnamon-cream text-xs font-semibold py-2.5 px-3 rounded-xl transition-colors text-center flex items-center justify-center gap-1">
+                                <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                                <span>Add Enquiry</span>
+                            </button>
+                        </div>
+                        <a href="https://wa.me/447852432693" target="_blank" rel="noopener noreferrer" class="block w-full bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold py-2 px-3 rounded-xl transition-colors text-center">Order on WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Product 2: C4 -->
+                <div class="bg-cinnamon-sand/60 rounded-3xl p-6 shadow-md border border-cinnamon-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-cinnamon-burgundy/10 text-cinnamon-burgundy text-[11px] uppercase tracking-wider px-3 py-1 rounded-full font-bold">Signature C4</span>
+                            <span class="text-xs text-cinnamon-espresso/60 font-medium">Sri Lankan Origin</span>
+                        </div>
+                        <div class="w-full h-48 bg-cinnamon-cream rounded-2xl flex items-center justify-center mb-6 border border-cinnamon-gold/20 overflow-hidden">
+                            <img src="c4.jpg" alt="C4 Quills" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-cinnamon-espresso mb-1">Signature Ceylon Cinnamon — C4</h3>
+                        <p class="text-xs text-cinnamon-espresso/60 italic mb-4">Cinnamomum verum</p>
+                        <p class="text-xs text-cinnamon-espresso/80 font-light mb-4">Available in Resealable Pouches & Tins (50g, 100g)</p>
+                    </div>
+                    <div class="space-y-3 pt-4 border-t border-cinnamon-gold/20">
+                        <div class="text-xs font-semibold text-cinnamon-burgundy">Price confirmed on enquiry</div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="openProductModal('Signature Ceylon Cinnamon — C4', 'C4', 'Cinnamomum verum', 'Sri Lanka')" class="bg-cinnamon-cream hover:bg-cinnamon-gold/30 text-cinnamon-espresso text-xs font-semibold py-2.5 px-3 rounded-xl transition-colors text-center">View Product</button>
+                            <button onclick="addToEnquiry('Signature Ceylon Cinnamon — C4', 'C4', 'Cinnamomum verum', '50g', 'Resealable Pouch')" class="bg-cinnamon-burgundy hover:bg-cinnamon-wine text-cinnamon-cream text-xs font-semibold py-2.5 px-3 rounded-xl transition-colors text-center flex items-center justify-center gap-1">
+                                <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                                <span>Add Enquiry</span>
+                            </button>
+                        </div>
+                        <a href="https://wa.me/447852432693" target="_blank" rel="noopener noreferrer" class="block w-full bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold py-2 px-3 rounded-xl transition-colors text-center">Order on WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Product 3: C5 -->
+                <div class="bg-cinnamon-sand/60 rounded-3xl p-6 shadow-md border border-cinnamon-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-cinnamon-burgundy/10 text-cinnamon-burgundy text-[11px] uppercase tracking-wider px-3 py-1 rounded-full font-bold">Signature C5</span>
+                            <span class="text-xs text-cinnamon-espresso/60 font-medium">Sri Lankan Origin</span>
+                        </div>
+                        <div class="w-full h-48 bg-cinnamon-cream rounded-2xl flex items-center justify-center mb-6 border border-cinnamon-gold/20 overflow-hidden">
+                            <img src="c5.jpg" alt="C5 Quills" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-cinnamon-espresso mb-1">Signature Ceylon Cinnamon — C5</h3>
+                        <p class="text-xs text-cinnamon-espresso/60 italic mb-4">Cinnamomum verum</p>
+                        <p class="text-xs text-cinnamon-espresso/80 font-light mb-4">Available in Resealable Pouches & Tins (50g, 100g)</p>
+                    </div>
+                    <div class="space-y-3 pt-4 border-t border-cinnamon-gold/20">
+                        <div class="text-xs font-semibold text-cinnamon-burgundy">Price confirmed on enquiry</div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="openProductModal('Signature Ceylon Cinnamon — C5', 'C5', 'Cinnamomum verum', 'Sri Lanka')" class="bg-cinnamon-cream hover:bg-cinnamon-gold/30 text-cinnamon-espresso text-xs font-semibold py-2.5 px-3 rounded-xl transition-colors text-center">View Product</button>
+                            <button onclick="addToEnquiry('Signature Ceylon Cinnamon — C5', 'C5', 'Cinnamomum verum', '50g', 'Resealable Pouch')" class="bg-cinnamon-burgundy hover:bg-cinnamon-wine text-cinnamon-cream text-xs font-semibold py-2.5 px-3 rounded-xl transition-colors text-center flex items-center justify-center gap-1">
+                                <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                                <span>Add Enquiry</span>
+                            </button>
+                        </div>
+                        <a href="https://wa.me/447852432693" target="_blank" rel="noopener noreferrer" class="block w-full bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold py-2 px-3 rounded-xl transition-colors text-center">Order on WhatsApp</a>
+                    </div>
+                </div>
+
+                <!-- Product 4: Black Pepper -->
+                <div class="bg-cinnamon-sand/60 rounded-3xl p-6 shadow-md border border-cinnamon-gold/20 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-cinnamon-burgundy/10 text-cinnamon-burgundy text-[11px] uppercase tracking-wider px-3 py-1 rounded-full font-bold">Whole Pepper</span>
+                            <span class="text-xs text-cinnamon-espresso/60 font-medium">Sri Lankan Origin</span>
+                        </div>
+                        <div class="w-full h-48 bg-cinnamon-cream rounded-2xl flex items-center justify-center mb-6 border border-cinnamon-gold/20 overflow-hidden">
+                            <img src="black-pepper.jpg" alt="Black Pepper" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="font-serif font-bold text-xl text-cinnamon-espresso mb-1">Premium Sri Lankan Whole Black Pepper</h3>
+                        <p class="text-xs text-cinnamon-espresso/60 italic mb-4">Piper nigrum</p>
+                        <p class="text-xs text-cinnamon-espresso/80 font-light mb-4">Available in Resealable Pouches & Tins (50g, 100g, 250g)</p>
+                    </div>
+                    <div class="space-y-3 pt-4 border-t border-cinnamon-gold/20">
+                        <div class="text-xs font-semibold text-cinnamon-burgundy">Price confirmed on enquiry</div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button onclick="openProductModal('Premium Sri Lankan Whole Black Pepper', 'Not Applicable', 'Piper nigrum', 'Sri Lanka')" class="bg-cinnamon-cream hover:bg-cinnamon-gold/30 text-cinnamon-espresso text-xs font-semibold py-2.5 px-3 rounded-xl transition-colors text-center">View Product</button>
+                            <button onclick="addToEnquiry('Premium Sri Lankan Whole Black Pepper', 'Not Applicable', 'Piper nigrum', '100g', 'Resealable Pouch')" class="bg-cinnamon-burgundy hover:bg-cinnamon-wine text-cinnamon-cream text-xs font-semibold py-2.5 px-3 rounded-xl transition-colors text-center flex items-center justify-center gap-1">
+                                <i data-lucide="plus" class="w-3.5 h-3.5"></i>
+                                <span>Add Enquiry</span>
+                            </button>
+                        </div>
+                        <a href="https://wa.me/447852432693" target="_blank" rel="noopener noreferrer" class="block w-full bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold py-2 px-3 rounded-xl transition-colors text-center">Order on WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Origin. Quality. Traceability. -->
+    <section class="py-20 bg-cinnamon-burgundy text-cinnamon-cream relative overflow-hidden reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest text-cinnamon-gold font-bold">Core Principles</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white">Origin. Quality. Traceability.</h2>
+                <p class="text-cinnamon-cream/80 font-light">Our commitment to absolute transparency and authenticity across every harvest brought to the UK.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-cinnamon-wine/80 p-8 rounded-3xl border border-cinnamon-gold/30 space-y-4 shadow-xl transition-transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-cinnamon-gold/20 flex items-center justify-center text-cinnamon-gold"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-white">Origin</h3>
+                    <p class="text-cinnamon-cream/80 text-sm leading-relaxed font-light">Authentic products selected from Sri Lanka, the true home of genuine Ceylon cinnamon and premium black pepper.</p>
+                </div>
+                <div class="bg-cinnamon-wine/80 p-8 rounded-3xl border border-cinnamon-gold/30 space-y-4 shadow-xl transition-transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-cinnamon-gold/20 flex items-center justify-center text-cinnamon-gold"><i data-lucide="award" class="w-6 h-6"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-white">Quality</h3>
+                    <p class="text-cinnamon-cream/80 text-sm leading-relaxed font-light">A specialist collection focused strictly on Alba, C4 and C5 true cinnamon quills, together with premium Sri Lankan black pepper.</p>
+                </div>
+                <div class="bg-cinnamon-wine/80 p-8 rounded-3xl border border-cinnamon-gold/30 space-y-4 shadow-xl transition-transform hover:-translate-y-1">
+                    <div class="w-12 h-12 rounded-2xl bg-cinnamon-gold/20 flex items-center justify-center text-cinnamon-gold"><i data-lucide="shield-check" class="w-6 h-6"></i></div>
+                    <h3 class="font-serif text-2xl font-bold text-white">Traceability</h3>
+                    <p class="text-cinnamon-cream/80 text-sm leading-relaxed font-light">Clear product and origin information, with batch and supplier details made available where applicable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Our Story -->
+    <section id="our-story" class="py-20 bg-cinnamon-sand border-y border-cinnamon-gold/20 reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative rounded-3xl overflow-hidden shadow-xl min-h-[450px] bg-cinnamon-cream border border-cinnamon-gold/30 flex items-center justify-center p-6 transition-transform duration-500 hover:scale-[1.02]">
+                    <img src="True_cinnamon_4.png" alt="Layered Ceylon Cinnamon Quills" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+                <div class="space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-cinnamon-burgundy font-semibold">Brand Heritage</span>
+                    <h2 class="font-serif font-bold text-3xl sm:text-4xl text-cinnamon-espresso leading-tight">Rooted in Sri Lanka. Created for the UK.</h2>
+                    <p class="text-base text-cinnamon-espresso/80 leading-relaxed font-light">Ceylon Harvest begins with a close family connection to cinnamon harvesting in Sri Lanka. We believe customers should know what they are buying, where it comes from and the story behind each harvest.</p>
+                    <p class="text-base text-cinnamon-espresso/80 leading-relaxed font-light">Registered in Scotland, United Kingdom, we bridge the gap between traditional Sri Lankan spice cultivation and discerning British kitchens, delis, and hospitality establishments.</p>
+                    <div>
+                        <a href="#shop" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-semibold rounded-full text-cinnamon-cream bg-cinnamon-burgundy hover:bg-cinnamon-wine transition-colors shadow">
+                            Explore Collection
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Trade & Wholesale -->
+    <section id="trade" class="py-20 bg-cinnamon-cream reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <span class="text-xs uppercase tracking-widest text-cinnamon-burgundy font-bold">B2B & Hospitality</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cinnamon-espresso">Bring the Finest of Ceylon to Your Customers</h2>
+                    <p class="text-cinnamon-espresso/80 leading-relaxed font-light">We welcome trade enquiries from independent retailers, speciality food shops, delicatessens, farm shops, restaurants, cafés, bakeries and hospitality businesses across the United Kingdom.</p>
+                    <ul class="space-y-3 text-sm text-cinnamon-espresso/90 font-medium">
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-700"></i> Alba, C4 & C5 true Ceylon cinnamon quills</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-700"></i> Premium ground cinnamon powder & whole black pepper</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-700"></i> Trade pricing available on request</li>
+                    </ul>
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <a href="https://wa.me/447852432693" target="_blank" rel="noopener noreferrer" class="bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-3.5 rounded-full font-semibold shadow transition-all inline-flex items-center gap-2">
+                            <i data-lucide="message-circle" class="w-4 h-4"></i>
+                            <span>Trade WhatsApp Enquiry</span>
+                        </a>
+                        <a href="#contact" class="bg-cinnamon-burgundy hover:bg-cinnamon-wine text-cinnamon-cream px-8 py-3.5 rounded-full font-semibold shadow transition-all inline-block">Contact Trade Team</a>
+                    </div>
+                </div>
+                <div class="bg-cinnamon-sand p-8 sm:p-10 rounded-3xl shadow-md border border-cinnamon-gold/30 space-y-6">
+                    <h3 class="font-serif text-2xl font-bold text-cinnamon-burgundy">Wholesale & Bulk Supply</h3>
+                    <p class="text-xs text-cinnamon-espresso/70 font-light">Interested in stocking authentic Ceylon Harvest spices? Get in touch with our team in Newton Mearns, Scotland.</p>
+                    <div class="space-y-3 text-sm">
+                        <div class="flex items-center gap-3 text-cinnamon-espresso"><i data-lucide="mail" class="w-4 h-4 text-cinnamon-burgundy"></i><span>info@ceylonharvest.co.uk</span></div>
+                        <div class="flex items-center gap-3 text-cinnamon-espresso"><i data-lucide="phone" class="w-4 h-4 text-cinnamon-burgundy"></i><span>+44 7852 432693</span></div>
+                        <div class="flex items-center gap-3 text-cinnamon-espresso"><i data-lucide="map-pin" class="w-4 h-4 text-cinnamon-burgundy"></i><span>10C Buchanan Drive, Newton Mearns, G77 6QN</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: What Our Customers Say -->
+    <section id="reviews" class="py-20 bg-cinnamon-light/60 border-y border-cinnamon-gold/20 reveal">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <span class="text-xs uppercase tracking-widest text-cinnamon-burgundy font-bold">Verified Feedback</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cinnamon-espresso">What Our Customers Say</h2>
+            <p class="text-cinnamon-espresso/80 font-light max-w-xl mx-auto">As Ceylon Harvest reaches customers across the UK, verified customer feedback will be shared here.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-cinnamon-cream reveal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <span class="text-xs uppercase tracking-widest text-cinnamon-burgundy font-bold">Get In Touch</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cinnamon-espresso">We’d Love to Hear From You</h2>
+                <p class="text-cinnamon-espresso/80 font-light">Whether you have a question about true Ceylon cinnamon, Alba, C4 or C5 grades, Sri Lankan black pepper, trade availability or ordering, we would be pleased to hear from you.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-cinnamon-sand p-8 sm:p-10 rounded-3xl border border-cinnamon-gold/30 space-y-6 shadow-sm">
+                    <h3 class="font-serif text-2xl font-bold text-cinnamon-burgundy">Ceylon Harvest Ltd</h3>
+                    <div class="space-y-4 text-sm text-cinnamon-espresso">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 text-cinnamon-burgundy shrink-0 mt-0.5"></i>
+                            <div>
+                                <p class="font-semibold">Registered Address:</p>
+                                <p class="font-light">10C Buchanan Drive, Newton Mearns, G77 6QN, United Kingdom</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="phone" class="w-5 h-5 text-cinnamon-burgundy shrink-0"></i>
+                            <div>
+                                <p class="font-semibold">Telephone / WhatsApp:</p>
+                                <a href="https://wa.me/447852432693" target="_blank" rel="noopener noreferrer" class="text-emerald-700 font-bold hover:underline">+44 7852 432693</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i data-lucide="mail" class="w-5 h-5 text-cinnamon-burgundy shrink-0"></i>
+                            <div>
+                                <p class="font-semibold">Email:</p>
+                                <a href="mailto:info@ceylonharvest.co.uk" class="hover:underline font-light">info@ceylonharvest.co.uk</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Google Map Embed -->
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2239.549551465997!2d-4.321855923348633!3d55.77663457310574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488849b25fbc7051%3A0x6b75c1a16bc0b98f!2s10C%20Buchanan%20Dr%2C%20Newton%20Mearns%2C%20Glasgow%2C%20G77%206QN%2C%20UK!5e0!3m2!1sen!2snz!4v1700000000000!5m2!1sen!2snz" 
+                            width="100%" 
+                            height="220" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="bg-cinnamon-sand p-8 sm:p-10 rounded-3xl border border-cinnamon-gold/30 space-y-6 shadow-sm">
+                    <h3 class="font-serif text-2xl font-bold text-cinnamon-burgundy">Send a Message</h3>
+                    <form onsubmit="event.preventDefault(); alert('Your message has been sent to Ceylon Harvest.');" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-semibold text-cinnamon-espresso mb-1">Your Name</label>
+                            <input type="text" required class="w-full px-4 py-3 rounded-xl bg-cinnamon-cream border border-cinnamon-gold/30 focus:outline-none focus:ring-2 focus:ring-cinnamon-burgundy">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-cinnamon-espresso mb-1">Email Address</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-xl bg-cinnamon-cream border border-cinnamon-gold/30 focus:outline-none focus:ring-2 focus:ring-cinnamon-burgundy">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-cinnamon-espresso mb-1">Message</label>
+                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-cinnamon-cream border border-cinnamon-gold/30 focus:outline-none focus:ring-2 focus:ring-cinnamon-burgundy"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-cinnamon-burgundy hover:bg-cinnamon-wine text-cinnamon-cream font-semibold py-3.5 rounded-xl shadow transition-all">Send Enquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1c1917] text-stone-300 pt-16 pb-8 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div class="space-y-4">
+                    <a href="#" class="inline-block focus:outline-none focus:ring-2 focus:ring-amber-500 rounded-lg p-1">
+                        <img src="ceylon_harvest_left_leaves.png" alt="Ceylon Harvest Logo" class="site-logo h-20 w-auto object-contain">
+                    </a>
+                    <p class="text-sm text-stone-400 leading-relaxed font-light">Specialists in true Ceylon cinnamon and Sri Lankan black pepper, brought directly from Sri Lanka to the United Kingdom.</p>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold text-amber-400 tracking-wider text-base mb-4 uppercase">Navigation</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="#home" class="text-stone-300 hover:text-amber-400 transition-colors">Home</a></li>
+                        <li><a href="#true-cinnamon" class="text-stone-300 hover:text-amber-400 transition-colors">True Ceylon Cinnamon</a></li>
+                        <li><a href="#our-story" class="text-stone-300 hover:text-amber-400 transition-colors">Our Story</a></li>
+                        <li><a href="#shop" class="text-stone-300 hover:text-amber-400 transition-colors">Shop</a></li>
+                        <li><a href="#trade" class="text-stone-300 hover:text-amber-400 transition-colors">Trade & Wholesale</a></li>
+                        <li><a href="#reviews" class="text-stone-300 hover:text-amber-400 transition-colors">Customer Reviews</a></li>
+                        <li><a href="#contact" class="text-stone-300 hover:text-amber-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold text-amber-400 tracking-wider text-base mb-4 uppercase">Information</h3>
+                    <ul class="space-y-2 text-sm font-light">
+                        <li><a href="privacy.html" class="text-stone-300 hover:text-amber-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="cookie.html" class="text-stone-300 hover:text-amber-400 transition-colors">Cookie Policy</a></li>
+                        <li><a href="terms.html" class="text-stone-300 hover:text-amber-400 transition-colors">Terms and Conditions</a></li>
+                        <li><a href="delivery.html" class="text-stone-300 hover:text-amber-400 transition-colors">Delivery and Returns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-serif font-bold text-amber-400 tracking-wider text-base mb-4 uppercase">Company Details</h3>
+                    <div class="text-sm text-stone-400 space-y-2 font-light">
+                        <p class="font-medium text-stone-200">Ceylon Harvest Ltd</p>
+                        <p>Registered in Scotland, United Kingdom</p>
+                        <p>Company No. SC899739</p>
+                        <p>10C Buchanan Drive, Newton Mearns, G77 6QN</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-6 border-t border-stone-800 text-center text-xs text-stone-400 space-y-2">
+                <p>&copy; 2026 Ceylon Harvest Ltd. All rights reserved.</p>
+                <p>Powered with love by <a href="https://algizadigital.com" target="_blank" rel="noopener noreferrer" class="text-amber-400 hover:underline font-medium">Al Giza Digital</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Fixed WhatsApp Floating Button -->
+    <a href="https://wa.me/447852432693" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Order on WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span>Order on WhatsApp</span>
+    </a>
+
+    <!-- Enquiry Cart / WhatsApp Checkout Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex justify-end transition-opacity duration-300">
+        <div class="w-full max-w-md bg-cinnamon-cream h-full flex flex-col shadow-2xl transform translate-x-full transition-transform duration-300" id="cart-drawer-panel">
+            <div class="p-6 bg-cinnamon-light border-b border-cinnamon-gold/30 flex items-center justify-between">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="shopping-bag" class="w-5 h-5 text-cinnamon-burgundy"></i>
+                    <h3 class="font-serif font-bold text-xl text-cinnamon-espresso">Your Enquiry Cart</h3>
+                </div>
+                <button onclick="toggleCartDrawer()" class="p-2 rounded-full hover:bg-cinnamon-sand text-cinnamon-espresso">
+                    <i data-lucide="x" class="w-5 h-5"></i>
+                </button>
+            </div>
+            <div class="flex-1 overflow-y-auto p-6 space-y-4" id="cart-items-container"></div>
+            <div id="checkout-form-section" class="p-6 bg-cinnamon-sand border-t border-cinnamon-gold/30 space-y-4">
+                <h4 class="font-serif font-bold text-sm text-cinnamon-burgundy uppercase tracking-wider">Customer & Delivery Details</h4>
+                <form id="whatsapp-checkout-form" onsubmit="sendWhatsAppOrder(event)" class="space-y-3">
+                    <div><input type="text" id="cust-name" required placeholder="Full Name *" class="w-full px-3 py-2 text-sm rounded-lg bg-cinnamon-cream border border-cinnamon-gold/30 focus:outline-none focus:ring-1 focus:ring-cinnamon-burgundy"></div>
+                    <div><input type="email" id="cust-email" required placeholder="Email Address *" class="w-full px-3 py-2 text-sm rounded-lg bg-cinnamon-cream border border-cinnamon-gold/30 focus:outline-none focus:ring-1 focus:ring-cinnamon-burgundy"></div>
+                    <div><input type="tel" id="cust-tel" required placeholder="Telephone Number *" class="w-full px-3 py-2 text-sm rounded-lg bg-cinnamon-cream border border-cinnamon-gold/30 focus:outline-none focus:ring-1 focus:ring-cinnamon-burgundy"></div>
+                    <div><textarea id="cust-address" rows="2" required placeholder="Delivery Address & Postcode *" class="w-full px-3 py-2 text-sm rounded-lg bg-cinnamon-cream border border-cinnamon-gold/30 focus:outline-none focus:ring-1 focus:ring-cinnamon-burgundy"></textarea></div>
+                    <div><textarea id="cust-notes" rows="2" placeholder="Additional delivery notes or questions (optional)" class="w-full px-3 py-2 text-sm rounded-lg bg-cinnamon-cream border border-cinnamon-gold/30 focus:outline-none focus:ring-1 focus:ring-cinnamon-burgundy"></textarea></div>
+                    <label class="flex items-start gap-2 text-xs text-cinnamon-espresso/80 pt-1">
+                        <input type="checkbox" required class="mt-0.5 rounded border-cinnamon-gold text-cinnamon-burgundy">
+                        <span>I agree to the privacy policy. Final product availability, price, delivery cost and payment instructions will be confirmed by Ceylon Harvest.</span>
+                    </label>
+                    <button type="submit" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold py-3 px-4 rounded-xl shadow-md flex items-center justify-center gap-2 transition-all">
+                        <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        <span>Send Order Enquiry via WhatsApp</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div id="product-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-cinnamon-cream rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl border border-cinnamon-gold/30 space-y-6">
+            <button onclick="closeProductModal()" class="absolute top-4 right-4 p-2 rounded-full hover:bg-cinnamon-sand text-cinnamon-espresso">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+            <div id="modal-content" class="space-y-4"></div>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Logic -->
+    <script>
+        lucide.createIcons();
+
+        // Scroll Reveal Observer
+        const observerOptions = {
+            threshold: 0.15
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Hero Slider Logic
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const dots = document.querySelectorAll('#slider-dots button');
+        let slideInterval = setInterval(nextSlide, 7000);
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.remove('hidden');
+                    slide.classList.add('grid');
+                } else {
+                    slide.classList.add('hidden');
+                    slide.classList.remove('grid');
+                }
+            });
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.remove('w-3', 'bg-cinnamon-burgundy/40');
+                    dot.classList.add('w-8', 'bg-cinnamon-burgundy');
+                } else {
+                    dot.classList.remove('w-8', 'bg-cinnamon-burgundy');
+                    dot.classList.add('w-3', 'bg-cinnamon-burgundy/40');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showSlide(currentSlideIndex);
+        }
+
+        function currentSlide(index) {
+            currentSlideIndex = index;
+            showSlide(currentSlideIndex);
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 7000);
+        }
+
+        // Enquiry Cart State
+        let enquiryCart = [];
+
+        function addToEnquiry(productName, grade, species, size, packaging) {
+            const existingItem = enquiryCart.find(item => item.productName === productName && item.size === size && item.packaging === packaging);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                enquiryCart.push({ productName, grade, species, size, packaging, quantity: 1 });
+            }
+            updateCartUI();
+            showToast(`${productName} (${size}) added to your enquiry cart.`);
+        }
+
+        function removeFromCart(index) {
+            enquiryCart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const totalItems = enquiryCart.reduce((sum, item) => sum + item.quantity, 0);
+            document.getElementById('cart-badge').innerText = totalItems;
+            document.getElementById('mobile-cart-badge').innerText = totalItems;
+
+            const container = document.getElementById('cart-items-container');
+            if (enquiryCart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 text-cinnamon-espresso/60 space-y-3">
+                        <i data-lucide="shopping-bag" class="w-12 h-12 mx-auto opacity-40"></i>
+                        <p class="text-sm">Your enquiry cart is empty.</p>
+                        <p class="text-xs">Add products from our specialist collection to request pricing and availability.</p>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = enquiryCart.map((item, index) => `
+                    <div class="bg-cinnamon-light/60 p-4 rounded-2xl border border-cinnamon-gold/20 flex justify-between items-center text-sm">
+                        <div class="space-y-1">
+                            <h5 class="font-serif font-bold text-cinnamon-espresso">${item.productName}</h5>
+                            <p class="text-xs text-cinnamon-espresso/70">Grade: ${item.grade} | Size: ${item.size} (${item.packaging})</p>
+                            <p class="text-xs font-semibold text-cinnamon-burgundy">Qty: ${item.quantity}</p>
+                        </div>
+                        <button onclick="removeFromCart(${index})" class="text-rose-700 hover:text-rose-900 p-2">
+                            <i data-lucide="trash-2" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                `).join('');
+            }
+            lucide.createIcons();
+        }
+
+        function toggleCartDrawer() {
+            const drawer = document.getElementById('cart-drawer');
+            const panel = document.getElementById('cart-drawer-panel');
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+                setTimeout(() => panel.classList.remove('translate-x-full'), 10);
+            } else {
+                panel.classList.add('translate-x-full');
+                setTimeout(() => drawer.classList.add('hidden'), 300);
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed bottom-6 right-6 z-50 bg-cinnamon-burgundy text-cinnamon-cream px-6 py-3 rounded-2xl shadow-xl text-sm font-semibold transition-all transform translate-y-2 opacity-0 flex items-center gap-2';
+            toast.innerHTML = `<i data-lucide="check-circle" class="w-4 h-4 text-cinnamon-gold"></i><span>${message}</span>`;
+            document.body.appendChild(toast);
+            lucide.createIcons();
+            setTimeout(() => { toast.classList.remove('translate-y-2', 'opacity-0'); }, 50);
+            setTimeout(() => {
+                toast.classList.add('translate-y-2', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
+        }
+
+        function sendWhatsAppOrder(event) {
+            event.preventDefault();
+            if (enquiryCart.length === 0) {
+                alert('Your enquiry cart is empty.');
+                return;
+            }
+
+            const name = document.getElementById('cust-name').value;
+            const email = document.getElementById('cust-email').value;
+            const tel = document.getElementById('cust-tel').value;
+            const address = document.getElementById('cust-address').value;
+            const notes = document.getElementById('cust-notes').value;
+
+            let itemsText = enquiryCart.map(item => 
+                `- ${item.quantity} x ${item.productName}\n  Grade: ${item.grade}\n  Species: ${item.species}\n  Pack Size: ${item.size}\n  Packaging: ${item.packaging}`
+            ).join('\n\n');
+
+            let message = `Hello Ceylon Harvest,\n\nI would like to make an order enquiry.\n\nCustomer details:\nName: ${name}\nEmail: ${email}\nTelephone: ${tel}\n\nDelivery address:\n${address}\nUnited Kingdom\n\nOrder items:\n${itemsText}\n\nAdditional notes:\n${notes || 'None'}\n\nPlease confirm product availability, final price, delivery cost and payment instructions.\n\nThank you.`;
+
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/447852432693?text=${encodedMessage}`, '_blank');
+        }
+
+        function openProductModal(name, grade, species, origin) {
+            const modal = document.getElementById('product-modal');
+            const content = document.getElementById('modal-content');
+            content.innerHTML = `
+                <span class="text-xs uppercase tracking-widest text-cinnamon-burgundy font-bold">${grade}</span>
+                <h3 class="font-serif font-bold text-2xl text-cinnamon-espresso">${name}</h3>
+                <p class="text-xs text-cinnamon-espresso/70 italic">${species} | Origin: ${origin}</p>
+                <div class="bg-cinnamon-light/60 p-4 rounded-2xl border border-cinnamon-gold/20 space-y-2 text-sm text-cinnamon-espresso">
+                    <p><strong>Format:</strong> Whole layered true cinnamon quills</p>
+                    <p><strong>Packaging:</strong> Resealable pouch and premium square tin</p>
+                    <p><strong>Storage:</strong> Store in a cool, dry place away from direct sunlight.</p>
+                    <p class="text-xs text-cinnamon-burgundy font-semibold pt-2">Price and availability confirmed on enquiry.</p>
+                </div>
+                <div class="pt-4 flex gap-4">
+                    <button onclick="addToEnquiry('${name}', '${grade}', '${species}', '50g', 'Resealable Pouch'); closeProductModal(); toggleCartDrawer();" class="flex-1 bg-cinnamon-burgundy hover:bg-cinnamon-wine text-cinnamon-cream py-3 rounded-xl font-semibold text-sm shadow transition-all">Add to Enquiry Cart</button>
+                    <a href="https://wa.me/447852432693" target="_blank" rel="noopener noreferrer" class="bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-3 rounded-xl font-semibold text-sm shadow transition-all flex items-center justify-center">WhatsApp</a>
+                </div>
+            `;
+            modal.classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('product-modal').classList.add('hidden');
+        }
+
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.setAttribute('data-lucide', 'menu');
+            } else {
+                icon.setAttribute('data-lucide', 'x');
+            }
+            lucide.createIcons();
+        }
+
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('site-header');
+            if (window.scrollY > 40) {
+                header.classList.add('shadow-md', 'bg-cinnamon-cream/95');
+                header.classList.remove('bg-cinnamon-light/90');
+            } else {
+                header.classList.remove('shadow-md', 'bg-cinnamon-cream/95');
+                header.classList.add('bg-cinnamon-light/90');
+            }
+        });
+    </script>
+</body>
+</html>
