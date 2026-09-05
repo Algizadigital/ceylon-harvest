@@ -169,32 +169,82 @@
             text-transform: uppercase;
             max-width: 150px;
         }
-		.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 16px; /* Prevents content from touching screen edges */
-  box-sizing: border-box;
-}
-.grid-layout {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
-  gap: 20px;
+		.blog-section {
+    padding: 60px 20px;
+    background-color: #fcf8f2; /* Light cream background to contrast with footer */
+    color: #2c221e;
+    text-align: center;
 }
 
-/* Mobile View Adjustment */
-@media (max-width: 768px) {
-  .grid-layout {
-    grid-template-cols: 1fr; /* Stack into a single column */
-  }
-h1 {
-  font-size: clamp(2rem, 5vw, 3.5rem); /* Scales smoothly between mobile and desktop */
+.blog-section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #3b2f2f;
 }
 
-img, video, iframe {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #665c58;
+    margin-bottom: 40px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.blog-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-content {
+    padding: 25px;
+}
+
+.blog-date {
+    font-size: 0.85rem;
+    color: #b8860b; /* Dark golden accent */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.blog-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    color: #2c221e;
+    line-height: 1.4;
+}
+
+.blog-card p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.read-more {
+    font-weight: 600;
+    color: #8b4513;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.read-more:hover {
+    color: #d2691e;
 }
     </style>
 </head>
@@ -690,7 +740,7 @@ img, video, iframe {
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
             <span class="text-xs uppercase tracking-widest text-cinnamon-burgundy font-bold">Verified Feedback</span>
             <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cinnamon-espresso">What Our Customers Say</h2>
-            <p class="text-cinnamon-espresso/80 font-light max-w-xl mx-auto">Be among the first to experience Ceylon Harvest. Place your order today and let your voice be the very first we share.</p>
+            <p class="text-cinnamon-espresso/80 font-light max-w-xl mx-auto">As Ceylon Harvest reaches customers across the UK, verified customer feedback will be shared here.</p>
         </div>
     </section>
 
@@ -764,6 +814,55 @@ img, video, iframe {
             </div>
         </div>
     </section>
+
+<!-- Blog Section -->
+<section id="blog" class="py-20 bg-cinnamon-sand reveal">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <span class="text-xs uppercase tracking-widest text-cinnamon-burgundy font-bold">Our Journal</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-cinnamon-espresso">Latest News & Spices Guide</h2>
+            <p class="text-cinnamon-espresso/80 font-light">Explore expert insights, traditional recipes, and the rich heritage of authentic Ceylon spices.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Blog Post 1 -->
+            <article class="bg-cinnamon-cream p-8 rounded-3xl border border-cinnamon-gold/30 flex flex-col justify-between shadow-sm transition-transform hover:-translate-y-1">
+                <div class="space-y-4">
+                    <span class="text-xs font-semibold text-cinnamon-burgundy uppercase tracking-wider block">September 5, 2026</span>
+                    <h3 class="font-serif text-xl font-bold text-cinnamon-espresso">The Health Benefits of True Ceylon Cinnamon vs. Cassia</h3>
+                    <p class="text-sm text-cinnamon-espresso/80 font-light leading-relaxed">Discover why true Ceylon cinnamon (Cinnamomum verum) is celebrated worldwide for its low coumarin content and distinct therapeutic properties.</p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-cinnamon-gold/20">
+                    <a href="article-cinnamon-benefits.html" class="text-sm font-semibold text-cinnamon-burgundy hover:underline inline-flex items-center gap-1">Read Full Article &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 2 -->
+            <article class="bg-cinnamon-cream p-8 rounded-3xl border border-cinnamon-gold/30 flex flex-col justify-between shadow-sm transition-transform hover:-translate-y-1">
+                <div class="space-y-4">
+                    <span class="text-xs font-semibold text-cinnamon-burgundy uppercase tracking-wider block">August 20, 2026</span>
+                    <h3 class="font-serif text-xl font-bold text-cinnamon-espresso">How to Properly Store Your Spices to Maintain Peak Freshness</h3>
+                    <p class="text-sm text-cinnamon-espresso/80 font-light leading-relaxed">Keep your Alba cinnamon quills and aromatic black pepper potent, fragrant, and flavorful for months with these simple storage practices.</p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-cinnamon-gold/20">
+                    <a href="article-spice-storage.html" class="text-sm font-semibold text-cinnamon-burgundy hover:underline inline-flex items-center gap-1">Read Full Article &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Blog Post 3 -->
+            <article class="bg-cinnamon-cream p-8 rounded-3xl border border-cinnamon-gold/30 flex flex-col justify-between shadow-sm transition-transform hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+                <div class="space-y-4">
+                    <span class="text-xs font-semibold text-cinnamon-burgundy uppercase tracking-wider block">August 10, 2026</span>
+                    <h3 class="font-serif text-xl font-bold text-cinnamon-espresso">Traditional Sri Lankan Spiced Tea: A Home Recipe</h3>
+                    <p class="text-sm text-cinnamon-espresso/80 font-light leading-relaxed">Bring the authentic warmth of Sri Lanka into your kitchen with this comforting, spiced tea blend crafted using freshly ground Ceylon ingredients.</p>
+                </div>
+                <div class="mt-8 pt-4 border-t border-cinnamon-gold/20">
+                    <a href="article-spiced-tea.html" class="text-sm font-semibold text-cinnamon-burgundy hover:underline inline-flex items-center gap-1">Read Full Article &rarr;</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer class="bg-[#1c1917] text-stone-300 pt-16 pb-8 border-t border-stone-800">
