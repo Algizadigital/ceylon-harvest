@@ -169,6 +169,33 @@
             text-transform: uppercase;
             max-width: 150px;
         }
+		.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px; /* Prevents content from touching screen edges */
+  box-sizing: border-box;
+}
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  gap: 20px;
+}
+
+/* Mobile View Adjustment */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-cols: 1fr; /* Stack into a single column */
+  }
+h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem); /* Scales smoothly between mobile and desktop */
+}
+
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
     </style>
 </head>
 
